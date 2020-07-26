@@ -14,7 +14,7 @@ async def on_command_error(ctx, error):
 
 @bot.command()
 async def ping(ctx):
-    await client.say(pingtime)
+await ctx.send('Pong! {0}'.format(round(bot.latency, 1)))
 
 
 bot.run(token)
